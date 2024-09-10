@@ -4,7 +4,7 @@
 ## the future age by 2050, assuming the
 ## the current year is 2023
 
-current_age = int(input("Enter your current age:"))
+current_age = int(input("How old are you?"))
 
 new_age = current_age + 27
 
