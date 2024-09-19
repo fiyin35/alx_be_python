@@ -3,7 +3,7 @@
 ## then use a for loop to print the multiplication
 ## table for that number from 1 to 10.
 
-number = int(input("Enter a number to see its multiplication table"))
+number = int(input("Enter a number to see its multiplication table:"))
 result = 0
 for item in range(1, 11):
     result = number * item
