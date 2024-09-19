@@ -6,11 +6,11 @@
 ## task for the day based on time 
 ## sensitivity.
 
-task = input("Enter task description:")
+task = input("Enter your task:")
 
-priority = input("Enter the task's priority (high, medium, low):").lower()
+priority = input("Priority (high, medium, low):").lower()
 
-time_bound = input("Is the task time bound? (Yes|No):").lower()
+time_bound = input("Is it time-bound? (Yes|No):").lower()
 
 match priority:
     case "high":
