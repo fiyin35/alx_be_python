@@ -18,7 +18,9 @@ def perform_operation(num1, num2, operation):
             result = num1 * num2
             print(f"Result: {result}")
         case "divide":
-            if num2 == 0:
+            if num1 == 0:
+                print("Cannot divide by zero")
+            elif num2 == 0:
                 print("Cannot divide by zero")
             else:
                 result = num1 / num2
