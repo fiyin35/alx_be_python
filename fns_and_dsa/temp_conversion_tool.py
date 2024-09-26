@@ -15,24 +15,30 @@ FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 def convert_to_celsius(fahrenheit):
-    celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    celsius = (float(fahrenheit) - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
     return celsius
 
 
 def convert_to_fahrenheit(celsius):
-    fahrenheit = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
+    fahrenheit = float(celsius) * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
     return fahrenheit
 
 def main():
-    temp = float(input("Enter the temperature to convert: "))
+    temp = input("Enter the temperature to convert: ")
     temp_format = input("Is this temperature in Celsius or Fahrenheit? (C/F):").capitalize()
     match temp_format:
         case "C":
-            celsius_tempt = convert_to_fahrenheit(temp)
-            print(f"{temp}°{temp_format} is {celsius_tempt}°F")
+            if temp.isdigit() == False:
+                print("Invalid temperature. Please enter a numeric value.")
+            else:
+                celsius_tempt = convert_to_fahrenheit(temp)
+                print(f"{temp}°{temp_format} is {celsius_tempt}°F")   
         case "F":
-            fahrenheit_tempt = convert_to_celsius(temp)
-            print(f"{temp}°{temp_format} is {fahrenheit_tempt}°C")
+            if temp.isdigit() == False:
+                print("Invalid temperature. Please enter a numeric value.")
+            else:
+                fahrenheit_tempt = convert_to_celsius(temp)
+                print(f"{temp}°{temp_format} is {fahrenheit_tempt}°C")
         case _:
             print("Please enter a valid input, Celsius or Fahrenheit? (C/F)")
 
