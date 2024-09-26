@@ -43,7 +43,7 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            item = input("Enter the item name: ").strip().capitalize()
+            item = input("Enter the item to add: ").strip().capitalize()
             add_item(item, shopping_list)
         elif choice == '2':
             item = input("Enter the item you want to remove: ").strip().capitalize()
