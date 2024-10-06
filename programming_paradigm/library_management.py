@@ -1,6 +1,6 @@
 # Author: Fiyinfolu
 # Add a Book class to initiate book title
-# book author and a private attribute to is_checked_out
+# book author and a private attribute is_checked_out
 # to track the availability of a book
 # checked_out method set is_checked_out to true
 # which indicate the book is available
