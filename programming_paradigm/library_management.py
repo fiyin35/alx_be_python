@@ -44,7 +44,6 @@ class Library:
             if book.title == title:
                 if not book.is_checked_out():
                     book.checked_out()
-                    self._books.remove(book)
                 else:
                     print(f"{book} already checked out")
                 return
@@ -55,12 +54,13 @@ class Library:
             if book.title == title:
                 if book.is_checked_out():
                     book.return_book()
-                    self._books.append(book)
                 else:
                     print(f"{book} book not checked out")
                 return
 
     def list_available_books(self):
         for book in self._books:
-            print(f"{book.title} by {book.author}")
+            if not book.is_checked_out():
+                print(f"{book.title} by {book.author}")
+
 
