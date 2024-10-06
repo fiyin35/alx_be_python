@@ -10,7 +10,7 @@ class Book:
     def checked_out(self):
         self._is_checked_out = True
 
-    def returned(self):
+    def return_book(self):
         self._is_checked_out = False
 
     def is_checked_out(self):
@@ -42,7 +42,7 @@ class Library:
         for book in self._books:
             if book.title == title:
                 if book.is_checked_out():
-                    book.returned()
+                    book.return_book()
                     self._books.append(book)
                 else:
                     print(f"{book} book not checked out")
