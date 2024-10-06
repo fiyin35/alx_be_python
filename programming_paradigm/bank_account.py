@@ -1,4 +1,11 @@
-## Author: here
+# Author: Fiyinfolu
+# Bank Account class with method
+# deposit to deposit amount specify by user
+# provided the amount is greater than zero
+# withdraw method to withdraw specify amount from the account
+# balance, provided the withdrawal amount is not greater than
+# the account_balance
+# display_balance simply display the current account balance
 
 class BankAccount:
 
@@ -6,7 +13,10 @@ class BankAccount:
         self.account_balance = account_balance
 
     def deposit(self, amount: float):
-        self.account_balance += amount
+        if amount >= 1:
+            self.account_balance += amount
+        else:
+            print("You can not deposit less than or equal to zero")
         return float(self.account_balance)
 
     def withdraw(self, amount: float):
