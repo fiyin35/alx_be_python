@@ -1,4 +1,16 @@
-#Author: Fiyinfolu
+# Author: Fiyinfolu
+# Add a Book class to initiate book title
+# book author and a private attribute to is_checked_out
+# to track the availability of a book
+# checked_out method set is_checked_out to true
+# which indicate the book is available
+# return_book method set is_checked_out to false
+# which indicate the book is not available
+# Library class manage a collection of books,
+# including add_book method for adding new books to the collection,
+# check_out_book method check a book out (which marks it as unavailable),
+# return_book method return it (making it available again),
+# and list_available_books method list all available books
 
 class Book:
 
